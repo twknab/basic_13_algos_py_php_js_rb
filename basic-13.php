@@ -53,6 +53,7 @@ function greater_than_y($arr, $y) {
 }
 greater_than_y([1,2,3,4,5], 3);
 
+// 6
 function min_max_avg($arr) {
   $min = $arr[0];
   $max = $arr[0];
@@ -71,6 +72,7 @@ function min_max_avg($arr) {
 }
 min_max_avg([1,2,3,4,5]);
 
+// 7 
 function swap_string_for_array_negative_values($arr) {
   foreach ($arr as $i => $val) {
     if ($val < 0) {
@@ -80,3 +82,60 @@ function swap_string_for_array_negative_values($arr) {
   var_dump($arr);
 }
 swap_string_for_array_negative_values([-1,2,3,4,5]);
+
+// 8
+function print_odds_1_to_255() {
+  foreach (range(1,255) as $num) {
+    echo ($num % 2 == 1 ? $num . "\n" : false);
+  }
+}
+print_odds_1_to_255();
+
+// 9
+function iterate_and_print_array($arr) {
+  foreach ($arr as $val) {
+    echo $val . "\n";
+  }
+}
+iterate_and_print_array([1,2,3,4,5]);
+
+// 10
+function get_and_print_average($arr) {
+  $sum = 0;
+  foreach ($arr as $val) {
+    $sum += $val;
+  }
+  echo ($sum/sizeof($arr)) . "\n";
+}
+get_and_print_average([1,2,3,4,5]);
+
+// 11
+function square_the_values($arr) {
+  foreach ($arr as $i => $val) {
+    $arr[$i] = $val * $val;
+  }
+  var_dump($arr);
+  return $arr;
+}
+square_the_values([1,2,3,4,5]);
+
+// 12
+function zero_out_negative_numbers($arr) {
+  foreach ($arr as $i => $val) {
+    $val < 0 ? $arr[$i] = 0 : false;
+  }
+  var_dump($arr);
+  return $arr;
+}
+zero_out_negative_numbers([1,2,3,4,-1]);
+
+// 13
+function shift_array_values($arr) {
+  foreach ($arr as $i => $val) {
+    $arr[$i] = $arr[$i + 1];
+  }
+  $arr[sizeof($arr) - 1] = 0;
+  var_dump($arr);
+  return $arr;
+}
+shift_array_values([1,2,3,4,5]);

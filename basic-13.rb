@@ -86,3 +86,54 @@ def swap_string_for_array_negative_values(arr)
   puts arr
 end
 swap_string_for_array_negative_values([-1,2,3,4,5])
+
+# 8
+def print_odds_1_to_255
+  for i in 1..255
+    puts i if i % 2 == 1
+  end
+end
+print_odds_1_to_255
+
+# 9
+def iterate_and_print_array(arr)
+  for i in arr
+    puts i
+  end
+end
+iterate_and_print_array([1,2,3,4,5])
+
+# 10
+def get_and_print_average(arr)
+  sum = 0
+  for val in arr
+    sum += val
+  end
+  puts(sum/arr.count)
+end
+get_and_print_average([1,2,3,4,5])
+
+# 11
+def square_the_values(arr)
+  arr.each_with_index { |val, i| arr[i] = val * val }
+  puts arr
+  return arr
+end
+square_the_values([1,2,3,4,5])
+
+# 12
+def zero_out_negative_numbers(arr)
+  arr.each_with_index { |val, i| arr[i] = 0 if val < 0 }
+  puts arr
+  return arr
+end
+zero_out_negative_numbers([1,2,3,4,-1])
+
+# 13
+def shift_array_values(arr)
+  arr.each_with_index { |val, i| arr[i] = arr[i + 1] }
+  arr[arr.count-1] = 0
+  puts arr
+  return arr
+end
+shift_array_values([1,2,3,4,5])
